@@ -23,7 +23,6 @@ Desktop 1080px*/
 
 main img {
   width: 100%;
-  max-width: 620px;
   margin: 0 auto 0 auto;
   display: block;
 }
@@ -99,24 +98,6 @@ a:link, a:visited, a:active, a:hover */
   transform: translateY(0%);
 }
 
-/*To make the screen 2 colomns on desktop, and 1 colomn on mobile:
-The last 5% is to add padding, border and margin later*/
-
-@media screen and (min-width: 767px) {
-  .app-article {
-    display: inline-block;
-    border: 1px solid red;
-    width: 60%;
-  }
-
-  .app-sidebar {
-    display: inline-block;
-    border: 1px solid green;
-    width: 35%;
-    vertical-align: top;
-  }
-}
-
 h1 {
   font-size: 2.5rem;
   margin-bottom: 0;
@@ -129,13 +110,16 @@ p {
 }
 
 form {
-  background-color: transparent;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
 }
 
 form fieldset {
   border: 5px dashed rgb(59, 59, 53);
   padding: 0.5em 0 1em 1em;
-  background-color: #fff;
 }
 
 form fieldset legend {
@@ -191,3 +175,49 @@ input[type="email"] {
   background-color: #eee;
 }
 */
+
+.footer {
+  background-color: rgb(223, 168, 158);
+  padding: 1em;
+}
+
+.footer .column {
+  display: block;
+  width: 100%;
+}
+
+/*To make the screen 2 colomns on desktop, and 1 colomn on mobile:
+The last 5% is to add padding, border and margin later*/
+
+/*i am TABLET and DESKTOP:*/
+@media screen and (min-width: 767px) {
+  .app-navigation-drawer {
+    transform: translateY(0);
+    background: transparent;
+    border-bottom: none;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  .app-navigation-drawer li {
+    display: inline-block;
+  }
+
+  .app-article {
+    display: inline-block;
+    width: 59%;
+  }
+
+  .app-sidebar {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+  }
+
+  .footer .column {
+    display: inline-block;
+    width: 20%;
+  }
+}
