@@ -67,7 +67,54 @@ a:link, a:visited, a:active, a:hover */
 }
 
 .app-navigation a:hover {
-  color: paleturquoise;
+  color: rgb(71, 236, 112);
+}
+
+/*hamburger menu:*/
+.app-navigation-drawer {
+  /*hide nav on load*/
+  display: block;
+  background: #fff;
+  padding: 0.5em;
+  border-bottom: 2px solid green;
+  list-style: none;
+  /*animate: default state on page load*/
+  transition: all 0.2s linear;
+  transform: translateY(-150%);
+}
+
+.sr-only {
+  display: none;
+}
+
+#hamburger-menu {
+  /*hide the checkbox*/
+  display: none;
+}
+
+#hamburger-menu:checked ~ .app-navigation-drawer {
+  /*show nav on :checked*/
+  display: block;
+  /*animate into page show state*/
+  transform: translateY(0%);
+}
+
+/*To make the screen 2 colomns on desktop, and 1 colomn on mobile:
+The last 5% is to add padding, border and margin later*/
+
+@media screen and (min-width: 767px) {
+  .app-article {
+    display: inline-block;
+    border: 1px solid red;
+    width: 60%;
+  }
+
+  .app-sidebar {
+    display: inline-block;
+    border: 1px solid green;
+    width: 35%;
+    vertical-align: top;
+  }
 }
 
 h1 {
@@ -122,6 +169,7 @@ input[type="submit"] {
   border: none;
   cursor: pointer;
   padding: 0.5em;
+  border-radius: 6px;
 }
 
 input[type="submit"]:hover {
@@ -129,6 +177,8 @@ input[type="submit"]:hover {
 }
 
 /*
+To change color in the form-boxes:
+
 input[type="text"] {
   background-color: #eee;
 }

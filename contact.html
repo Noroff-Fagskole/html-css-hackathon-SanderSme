@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -19,18 +21,36 @@
                 <img src="./img/logo.png" alt="CSS Tricks">
             </a>
             <nav class="app-navigation">
-                <a href="/">
-                    <i class="fas fa-home color-red"></i>Home
-                </a>
-                <a href="./about.html">
-                    <i class="fas fa-info color-red"></i>About
-                </a>
-                <a href="./contact.html">
-                    <i class="fas fa-phone color-red"></i>Contact
-                </a>
-                <a href="./login.html">
-                    <i class="fas fa-sign-in-alt color-red"></i>Login
-                </a>
+
+                <label for="hamburger-menu">
+                    <span class="sr-only">Hamburger menu</span>
+                    <i class="fas fa-bars"></i>
+                </label>
+                <input id="hamburger-menu" type="checkbox" />
+
+                <ul class="app-navigation-drawer">
+                    <li>
+                        <a href="/">
+                        <i class="fas fa-home color-red"></i>Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./about.html">
+                        <i class="fas fa-info color-red"></i>About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">
+                        <i class="fas fa-phone color-red"></i>Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./login.html">
+                        <i class="fas fa-sign-in-alt color-red"></i>Login
+                        </a>
+                    </li>
+                </ul>
+                
             </nav>
         </div>
     </header>
